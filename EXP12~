@@ -1,0 +1,11 @@
+;Move one memory block from one location to another
+MVI C,5
+LXI H,0
+LXI D,10
+LOOP: MOV A,M
+STAX D
+INX H
+INX D
+DCR C
+JNZ LOOP
+HLT

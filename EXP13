@@ -1,0 +1,3 @@
+;BUBBLE SORT 
+LXI H,0
+MVI D,0
