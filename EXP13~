@@ -1,1 +1,28 @@
-LXI 
+;BUBBLE SORT 
+;LOAD Size of list / array
+;Retrive list element in accumulator
+;Set d=0 as a flag
+;Set C as No of elements in list / array  
+;Decrement C as n size list contain n-1 elements
+;Increment Memory to access list
+START: LXI H,0
+MVI D,00H
+MOV C,M
+DCR C 
+INX H
+CHECK: MOV A,M
+INX H
+CMP M
+JC NEXTBYTE 
+JZ NEXTBYTE
+MOV B,M
+MOV M,A
+DCX H
+MOV M,B
+INX H
+MVI D,01H
+NEXTBYTE: DCR C
+JNZ CHECK
+MOV A,D
+HLT
+
