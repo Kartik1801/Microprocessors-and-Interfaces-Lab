@@ -1,0 +1,9 @@
+;EXPERIMENT 16: to find Square of a no.
+LXI H,0000H
+MVI A,00
+MOV B, M	
+LOOP: ADD M
+DCR B
+JNZ LOOP
+STA 0001
+HLT	
